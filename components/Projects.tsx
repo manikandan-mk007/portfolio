@@ -1,40 +1,48 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Luminary Dashboard",
-    description:
-      "A real-time analytics dashboard with dynamic charts, filterable tables, and role-based UI states — built entirely with vanilla JS and CSS custom properties.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
-    github: "#",
-    mockup: "chart",
-    gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-    num: "01",
+    title: "Clinic Management System",
+    description: "A full-stack hospital management system with role-based access for Admin and Lab Technician. Includes lab report generation, abnormal result detection, and automated billing workflows using REST APIs.",
+    tech: ["Python", "Django", "DRF", "React", "MySQL", "Axios", "REST APIs"],
+    link: "https://cmsadminlab.vercel.app/",
+    github: "https://github.com/manikandan-mk007/CMS_Admin_Lab.git",
+    mockup: "dashboard",
+    gradient: "...",
+    image: "/assets/Images/cms.png",
   },
   {
-    title: "ShopFlow E-Commerce",
-    description:
-      "Full-featured storefront UI with cart management, product filtering, localStorage persistence, and a checkout flow with form validation.",
-    tech: ["HTML", "CSS Grid", "JS", "SQL"],
+    title: "Resume Matcher Pro",
+    description: "An AI-powered resume screening system that uses NLP and transformer models to match resumes with job descriptions based on semantic similarity scoring.",
+    tech: ["Python", "Pandas", "NumPy", "Streamlit"],
     link: "#",
-    github: "#",
-    mockup: "shop",
-    gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    num: "02",
+    github: "https://github.com/manikandan-mk007/Resume_Matcher_Pro.git",
+    mockup: "ai",
+    gradient: "...",
+    image: "/assets/Images/Resume_Matcher_Pro.png",
   },
   {
-    title: "DevNotes App",
-    description:
-      "A markdown-supported note-taking app with tagging, search, dark mode, and drag-to-reorder — all in the browser using the Web APIs.",
-    tech: ["HTML", "CSS", "JavaScript", "Git"],
+    title: "Expense Tracker",
+    description: "A responsive personal finance tracking application with real-time expense management, category-wise tracking, and dynamic UI updates for better financial insights.",
+    tech: ["React", "JavaScript", "TailwindCSS", "Vite"],
     link: "#",
-    github: "#",
-    mockup: "notes",
-    gradient: "linear-gradient(135deg, #1a0533 0%, #2d1b69 50%, #11998e 100%)",
-    num: "03",
+    github: "https://github.com/manikandan-mk007/Expense-Tracker-React.git",
+    mockup: "finance",
+    gradient: "...",
+    image: "/assets/Images/Expense_Tracker.png", 
+  },
+  {
+    title: "Portfolio Website",
+    description: "A modern developer portfolio built with React and TypeScript showcasing projects, skills, and experience with optimized performance and responsive UI design.",
+    tech: ["React", "TypeScript", "Next.js", "PostCSS"],
+    link: "https://portfolio-o5cw.onrender.com/#home",
+    github: "https://github.com/manikandan-mk007/portfolio.git",
+    mockup: "portfolio",
+    gradient: "...",
+    image: "/assets/Images/portfolio.png", 
   },
 ];
 
@@ -152,7 +160,16 @@ export default function Projects() {
               {/* Image / mockup area */}
               <div className="project-image">
                 <div className="project-img-inner" style={{ background: project.gradient }}>
-                  {mockupMap[project.mockup]}
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="project-img"
+                    />
+                  ) : (
+                    mockupMap[project.mockup]
+                  )}
                 </div>
                 <div className="project-overlay">
                   <span className="project-num">{project.num}</span>

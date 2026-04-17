@@ -92,7 +92,7 @@ export default function Hero() {
             <p><span className="kw">const</span> developer = {"{"}</p>
             <p className="indent"><span className="key">name</span>: <span className="str">&quot;Thangamanikandan&quot;</span>,</p>
             <p className="indent"><span className="key">role</span>: <span className="str">&quot;Full Stack Developer&quot;</span>,</p>
-            <p className="indent"><span className="key">loves</span>: [<span className="str">&quot;Debugging&quot;</span>, <span className="str">&quot;Read Manhwas&quot;</span>],</p>
+            <p className="indent"><span className="key">loves</span>: [<span className="str">&quot;Anime&quot;</span>, <span className="str">&quot;Manhwas&quot;</span>],</p>
             <p className="indent"><span className="key">available</span>: <span className="bool">true</span></p>
             <p>{"}"}</p>
           </div>

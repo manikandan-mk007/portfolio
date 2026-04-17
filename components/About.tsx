@@ -78,7 +78,15 @@ export default function About() {
                 <span className="stat-label">Years Exp.</span>
               </div>
             </div>
-            <Link href="#contact" className="btn btn-primary">Download CV</Link>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <a href="/cv/Thangamanikandan_CV.pdf" download className="btn btn-primary">
+                Download CV
+              </a>
+
+              <a href="/cv/Thangamanikandan_CV.pdf" target="_blank" className="btn btn-ghost">
+                View CV
+              </a>
+            </div>
           </div>
         </div>
       </div>
