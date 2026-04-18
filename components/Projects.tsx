@@ -155,9 +155,8 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid reveal">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <div className="project-card" key={project.title}>
-              {/* Image / mockup area */}
               <div className="project-image">
                 <div className="project-img-inner" style={{ background: project.gradient }}>
                   {project.image ? (
@@ -172,7 +171,9 @@ export default function Projects() {
                   )}
                 </div>
                 <div className="project-overlay">
-                  <span className="project-num">{project.num}</span>
+                  <span className="project-num">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
               </div>
 
