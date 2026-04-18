@@ -1,5 +1,19 @@
 "use client";
 import { useEffect, useRef } from "react";
+import {
+  SiPython,
+  SiDjango,
+  SiReact,
+  SiMysql,
+  SiPostgresql,
+  SiFastapi,
+  SiDocker,
+  SiGit,
+} from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
+import { AiOutlineRobot } from "react-icons/ai";
+import { BsGraphUp } from "react-icons/bs";
 
 const skills = [
   { name: "Python Full Stack", percent: 90 },
@@ -11,18 +25,66 @@ const skills = [
 ];
 
 const techStack = [
-  { name: "Python", icon: "🐍" },
-  { name: "Django", icon: "🌐" },
-  { name: "React", icon: "⚛️" },
-  { name: "REST API", icon: "🔗" },
-  { name: "MySQL", icon: "🗄️" },
-  { name: "Oracle", icon: "🏛️" },
-  { name: "AI Tools", icon: "🤖" },
-  { name: "Data Science", icon: "📊" },
-  { name: "FastAPI", icon: "⚡" },
-  { name: "PostgreSQL", icon: "🐘" },
-  { name: "Git", icon: "🔧" },
-  { name: "Docker", icon: "🐳" },
+  {
+    name: "Python",
+    icon: <SiPython color="#3776AB" />,
+    link: "https://www.python.org/",
+  },
+  {
+    name: "Django",
+    icon: <SiDjango color="#092E20" />,
+    link: "https://www.djangoproject.com/",
+  },
+  {
+    name: "React",
+    icon: <SiReact color="#61DAFB" />,
+    link: "https://react.dev/",
+  },
+  {
+    name: "REST API",
+    icon: <TbApi color="#F59E0B" />,
+    link: "https://restfulapi.net/",
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql color="#4479A1" />,
+    link: "https://www.mysql.com/",
+  },
+  {
+    name: "Oracle",
+    icon: <FaDatabase color="#EF4444" />,
+    link: "https://www.oracle.com/",
+  },
+  {
+    name: "AI Tools",
+    icon: <AiOutlineRobot color="#8B5CF6" />,
+    link: "https://openai.com/",
+  },
+  {
+    name: "Data Science",
+    icon: <BsGraphUp color="#10B981" />,
+    link: "https://www.datasciencecentral.com/",
+  },
+  {
+    name: "FastAPI",
+    icon: <SiFastapi color="#009688" />,
+    link: "https://fastapi.tiangolo.com/",
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql color="#336791" />,
+    link: "https://www.postgresql.org/",
+  },
+  {
+    name: "Git",
+    icon: <SiGit color="#F05032" />,
+    link: "https://git-scm.com/",
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker color="#2496ED" />,
+    link: "https://www.docker.com/",
+  },
 ];
 
 export default function Skills() {
@@ -41,7 +103,7 @@ export default function Skills() {
             entry.target
               .querySelectorAll<HTMLElement>(".progress-fill[data-width]")
               .forEach((bar) => {
-                bar.style.width = (bar.dataset.width ?? "0") + "%";
+                bar.style.width = `${bar.dataset.width ?? "0"}%`;
               });
 
             observer.unobserve(entry.target);
@@ -57,11 +119,18 @@ export default function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section skills" id="skills" aria-labelledby="skills-heading">
+    <section
+      ref={sectionRef}
+      className="section skills"
+      id="skills"
+      aria-labelledby="skills-heading"
+    >
       <div className="container">
         <div className="section-header reveal">
           <span className="section-tag">02 / Skills</span>
-          <h2 id="skills-heading" className="section-title">What I Work With</h2>
+          <h2 id="skills-heading" className="section-title">
+            What I Work With
+          </h2>
         </div>
 
         <div className="skills-grid reveal">
@@ -93,10 +162,18 @@ export default function Skills() {
             <h3 className="skills-subtitle">Tech Stack</h3>
             <div className="tech-grid">
               {techStack.map((tech) => (
-                <div className="tech-card" key={tech.name}>
+                <a
+                  key={tech.name}
+                  href={tech.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tech-card"
+                  aria-label={`Open ${tech.name} official website`}
+                  title={tech.name}
+                >
                   <span className="tech-icon">{tech.icon}</span>
                   <span>{tech.name}</span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
