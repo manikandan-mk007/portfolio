@@ -42,9 +42,16 @@ https://portfolio-o5cw.onrender.com/
 
 ##  Screenshots
 
-![Home](screenshots/dashboarddark.png)
-![Projects](images/projects.png)
-![Contact](images/contact.png)
+###  Dark vs Light Mode
+
+| Section       |  Dark Mode |  Light Mode |
+|--------------|------------|-------------|
+| About        | ![About Dark](screenshots/aboutdark.png) | ![About Light](screenshots/aboutlight.png) |
+| Contact      | ![Contact Dark](screenshots/contactdark.png) | ![Contact Light](screenshots/contactlight.png) |
+| Dashboard    | ![Dashboard Dark](screenshots/dashboarddark.png) | ![Dashboard Light](screenshots/dashboardlight.png) |
+| Experience   | ![Experience Dark](screenshots/experiencedark.png) | ![Experience Light](screenshots/experiencelight.png) |
+| Projects     | ![Projects Dark](screenshots/projectsdark.png) | ![Projects Light](screenshots/projectlight.png) |
+| Skills       | ![Skills Dark](screenshots/skillsdark.png) | ![Skills Light](screenshots/skillslight.png) |
 
 
 
