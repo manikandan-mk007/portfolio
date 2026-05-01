@@ -6,43 +6,88 @@ import Image from "next/image";
 const projects = [
   {
     title: "Clinic Management System",
-    description: "A full-stack hospital management system with role-based access for Admin and Lab Technician. Includes lab report generation, abnormal result detection, and automated billing workflows using REST APIs.",
+    description:
+      "A production-ready hospital workflow platform built with a multi-role architecture (Admin, Doctor, Lab Technician, Receptionist). Features include lab prescription management, automated abnormal result detection, real-time report generation, and dynamic billing workflows integrated via REST APIs.",
     tech: ["Python", "Django", "DRF", "React", "MySQL", "Axios", "REST APIs"],
     link: "https://cmsadminlab.vercel.app/",
     github: "https://github.com/manikandan-mk007/CMS_Admin_Lab.git",
     mockup: "dashboard",
-    gradient: "...",
+    gradient: "from-blue-600 via-indigo-600 to-purple-600",
     image: "/assets/Images/cms.png",
   },
+
+  {
+    title: "AI Job Assistant (Browser Extension + Backend)",
+    description:
+      "An AI-powered job analysis platform that evaluates job descriptions against user profiles using NLP and semantic similarity models. Provides match scoring, skill gap analysis, keyword suggestions, and job tracking with analytics dashboard. Works across LinkedIn, Indeed, Naukri, and Glassdoor.",
+    tech: [
+      "FastAPI",
+      "Python",
+      "NLP",
+      "JavaScript",
+      "Chrome Extension",
+      "React",
+      "SQLite/PostgreSQL"
+    ],
+    link: "https://addons.mozilla.org/en-US/firefox/addon/ai-job-assistant/",
+    github: "https://github.com/manikandan-mk007/Job-Assistant-AI",
+    mockup: "ai",
+    gradient: "from-cyan-500 via-blue-600 to-indigo-700",
+    image: "/assets/Images/ai_job_assistant.png",
+  },
+
+  {
+    title: "Copy History Manager (Browser Extension)",
+    description:
+      "A productivity-focused browser extension that automatically captures and manages clipboard history. Features include instant paste modal, search functionality, pinning important copies, and optional cloud sync using a FastAPI backend. Designed with a modern UI and seamless background processing.",
+    tech: [
+      "JavaScript",
+      "Chrome Extension (MV3)",
+      "FastAPI",
+      "REST APIs",
+      "Chrome Storage API"
+    ],
+    link: "https://microsoftedge.microsoft.com/addons/detail/dkkkaogcgdnpnfcijpjldnadjbjjopme", 
+    github: "https://github.com/manikandan-mk007/Copy-History-Manager", 
+    mockup: "tool",
+    gradient: "from-purple-500 via-indigo-500 to-blue-500",
+    image: "/assets/Images/copy_history_manager.png",
+  },
+
   {
     title: "Resume Matcher Pro",
-    description: "An AI-powered resume screening system that uses NLP and transformer models to match resumes with job descriptions based on semantic similarity scoring.",
-    tech: ["Python", "Pandas", "NumPy", "Streamlit"],
+    description:
+      "An intelligent resume screening system that leverages NLP and transformer-based embeddings to match resumes with job descriptions using semantic similarity scoring, improving hiring efficiency and candidate evaluation.",
+    tech: ["Python", "Pandas", "NumPy", "Streamlit", "Scikit-learn"],
     link: "#",
     github: "https://github.com/manikandan-mk007/Resume_Matcher_Pro.git",
     mockup: "ai",
-    gradient: "...",
+    gradient: "from-purple-500 via-pink-500 to-red-500",
     image: "/assets/Images/Resume_Matcher_Pro.png",
   },
+
   {
     title: "Expense Tracker",
-    description: "A responsive personal finance tracking application with real-time expense management, category-wise tracking, and dynamic UI updates for better financial insights.",
+    description:
+      "A modern personal finance management app with real-time expense tracking, category-based insights, and interactive UI. Designed with a responsive layout and optimized state management for smooth user experience.",
     tech: ["React", "JavaScript", "TailwindCSS", "Vite"],
     link: "#",
     github: "https://github.com/manikandan-mk007/Expense-Tracker-React.git",
     mockup: "finance",
-    gradient: "...",
-    image: "/assets/Images/Expense_Tracker.png", 
+    gradient: "from-green-400 via-emerald-500 to-teal-600",
+    image: "/assets/Images/Expense_Tracker.png",
   },
+
   {
     title: "Portfolio Website",
-    description: "A modern developer portfolio built with React and TypeScript showcasing projects, skills, and experience with optimized performance and responsive UI design.",
-    tech: ["React", "TypeScript", "Next.js", "PostCSS"],
+    description:
+      "A high-performance developer portfolio built with modern frontend technologies, showcasing projects, skills, and experience with a clean SaaS-inspired UI, smooth animations, and responsive design.",
+    tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     link: "https://portfolio-o5cw.onrender.com/#home",
     github: "https://github.com/manikandan-mk007/portfolio.git",
     mockup: "portfolio",
-    gradient: "...",
-    image: "/assets/Images/portfolio.png", 
+    gradient: "from-gray-800 via-gray-900 to-black",
+    image: "/assets/Images/portfolio.png",
   },
 ];
 
