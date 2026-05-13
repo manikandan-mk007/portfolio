@@ -4,6 +4,7 @@ import { Syne, Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -29,11 +30,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark" className={`${syne.variable} ${figtree.variable}`}>
+    <html
+      lang="en"
+      data-theme="dark"
+      className={`${syne.variable} ${figtree.variable}`}
+    >
       <body>
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
+
+        {/* Portfolio Chatbot */}
+        <Chatbot />
       </body>
     </html>
   );
